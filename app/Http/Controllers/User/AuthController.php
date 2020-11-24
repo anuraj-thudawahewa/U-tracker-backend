@@ -8,14 +8,15 @@ use App\Models\User;
 use JWTAuth;
 use Validator;
 use Illuminate\Support\Facades\Hash;
-use Tymon\JWTAuth\Exceptions\JWTException;
+use Illuminate\Support\Facades\Auth;
+
 
 class AuthController extends Controller
 {
     //
     protected $user;
 
-
+//class constructor
     public function __construct()
     {
         $this->user = new User;
@@ -25,6 +26,7 @@ class AuthController extends Controller
 //user register function
     public function register(Request $request)
     {
+        //before save check validation
         $validator = Validator::make($request->all(),
             [
                 'firstname'=>'required|string',
@@ -33,6 +35,7 @@ class AuthController extends Controller
                 'password'=>'required|string|min:6',
             ]);
 
+//when validation fails,response
         if($validator->fails())
         {
             return response()->json([
@@ -41,6 +44,7 @@ class AuthController extends Controller
             ],400);
         }
 
+        //before register check email is already available
         $check_email = $this->user->where("email",$request->email)->count();
         if($check_email > 0)
         {
@@ -51,7 +55,7 @@ class AuthController extends Controller
 
         }
 
-
+//create user with details
         $registerComplete = $this->user::create([
             'firstname'=>$request->firstname,
             'lastname'=>$request->lastname,
@@ -68,9 +72,10 @@ class AuthController extends Controller
 
 
 
-
+//user login function
     public function login(Request $request)
     {
+        //email validation
         $validator = Validator::make($request->only('email','password'),
             [
                 'email'=>'required|email',
@@ -78,10 +83,12 @@ class AuthController extends Controller
             ]
         );
 
+        //when validation fails
         if($validator->fails())
         {
             return response()->json([
                 "success"=>false,
+
                 "message"=>$validator->messages()->toArray(),
             ],400);
         }
@@ -90,6 +97,7 @@ class AuthController extends Controller
 
         $input = $request->only("email","password");
 
+//check input and token
         if(!$jwt_token = auth('users')->attempt($input))
         {
             return response()->json([
@@ -99,11 +107,33 @@ class AuthController extends Controller
 
         }
 
-        return response()->json([
+//finally user successfully login & response
+        return response()->json(array(
             'success'=>true,
+            'firstname'=>$request->user()->firstname,
             'token'=>$jwt_token,
-        ]);
+        ));
     }
+
+
+    public function addUser(){
+
+        $registerComplete = $this->user::create([
+            'firstname'=>$request->firstname,
+            'lastname'=>$request->lastname,
+            'email'=>$request->email,
+            'password'=> Hash::make($request->password),
+        ]);
+
+
+        return response()->json(array(
+            'success'=>true,
+            'firstname'=>$request->user()
+
+        ));
+
+    }
+
 
 
 }

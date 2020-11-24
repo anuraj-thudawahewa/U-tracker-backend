@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,8 +27,11 @@ Route::group([
 function(){
     Route::post('register','App\Http\Controllers\User\AuthController@register');
     Route::post('login','App\Http\Controllers\User\AuthController@login');
+    //Route::post('add-user','App\Http\Controllers\User\AuthController@addUser');
+
     //Route::post('login','AuthController@login');
 });
+
 
 
 
