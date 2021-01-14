@@ -29,7 +29,7 @@ class AuthController extends Controller
         //before save check validation
         $validator = Validator::make($request->all(),
             [
-                'firstname'=>'required|string',
+                'vehicle'=>'required|string',
                 'lastname'=>'required|string',
                 'email'=>'required|email',
                 'password'=>'required|string|min:6',

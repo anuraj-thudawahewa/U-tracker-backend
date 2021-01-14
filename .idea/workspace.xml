@@ -19,29 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcdebf47-14da-4961-8104-3811f587fef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Vehicle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Vehicle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_24_073549_create_vehicles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/components/Dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="dcdebf47-14da-4961-8104-3811f587fef3" name="Default Changelist" comment="making migration models">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_24_081122_create_company_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_24_081332_create_gps_readings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_24_081806_create_user_roles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_24_081831_create_trips_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Vehicles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vehicle.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_24_073549_create_vehicles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_24_073549_create_vehicles_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/../debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,8 +215,25 @@
       <workItem from="1605326011317" duration="1816000" />
       <workItem from="1605423760900" duration="1846000" />
       <workItem from="1605587606402" duration="2972000" />
-      <workItem from="1606199485234" duration="3854000" />
+      <workItem from="1606199485234" duration="6832000" />
+      <workItem from="1606212422967" duration="235000" />
+      <workItem from="1606217390529" duration="2713000" />
+      <workItem from="1609922238901" duration="52000" />
+      <workItem from="1610102638382" duration="2431000" />
+      <workItem from="1610184312446" duration="1404000" />
+      <workItem from="1610197192813" duration="144000" />
+      <workItem from="1610376227873" duration="1116000" />
+      <workItem from="1610596496685" duration="1796000" />
+      <workItem from="1610600100992" duration="3394000" />
     </task>
+    <task id="LOCAL-00001" summary="making migration models">
+      <created>1606204169799</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606204169800</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +253,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="making migration models" />
+    <option name="LAST_COMMIT_MESSAGE" value="making migration models" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1603767305759">
@@ -257,6 +265,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" width="814" height="729" key="#Intentions/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1603797587539" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610601844266">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1610601844266" />
     <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1603768645845">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,5 +285,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603768645844" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606204401842">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1606204401842" />
   </component>
 </project>

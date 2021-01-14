@@ -28,7 +28,8 @@ function(){
     Route::post('register','App\Http\Controllers\User\AuthController@register');
     Route::post('login','App\Http\Controllers\User\AuthController@login');
     //Route::post('add-user','App\Http\Controllers\User\AuthController@addUser');
-
+    Route::get('getlocation','App\Http\Controllers\vehicles@getLocation');
+    Route::post('savevehicle','App\Http\Controllers\vehicles@saveVehicle');
     //Route::post('login','AuthController@login');
 });
 

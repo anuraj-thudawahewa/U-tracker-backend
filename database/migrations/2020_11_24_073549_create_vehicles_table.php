@@ -18,10 +18,12 @@ class CreateVehiclesTable extends Migration
             $table->timestamps();
             $table->string('vehicle_number');
             $table->string('type');
-            $table->string('owner_contact_no');
-            $table->string('owner_contact_name');
-            $table->string('driver_contact_no');
-            $table->string('driver_contact_name');
+            $table->string('owner_name');
+            $table->string('owner_contact_no')->nullable();
+            $table->string('driver_name');
+            $table->string('driver_contact_no')->nullable();
+            $table->string('device_id')->nullable();
+            $table->integer('unit_per_km')->nullable();
         });
     }
 
